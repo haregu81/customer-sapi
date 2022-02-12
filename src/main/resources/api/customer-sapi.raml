@@ -1,0 +1,18 @@
+#%RAML 1.0
+title: customer-sapi
+version: v0
+
+/customers:
+  get:
+    description: Retrive all customers
+    displayName: Get customers
+    queryParameters:
+      Country:
+        required: false
+    responses:
+      200:
+        body:
+          application/json:
+            examples:
+              output: !include example/customers.json
+  
